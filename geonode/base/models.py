@@ -743,6 +743,11 @@ class ResourceBase(PolymorphicModel, PermissionLevelMixin, ItemBase):
     uuid = models.CharField(max_length=36, unique=True, default=gen_uuid)
     title = models.CharField(_('title'), max_length=255, help_text=_(
         'name by which the cited resource is known'))
+    note = models.TextField(
+        _('note'),
+        max_length=2000,
+        blank=True,
+        help_text='note')
     abstract = models.TextField(
         _('abstract'),
         max_length=2000,

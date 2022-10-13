@@ -398,7 +398,10 @@ class ResourceBaseForm(TranslationModelForm):
         label=_("Abstract"),
         required=False,
         widget=TinyMCE())
-
+    note = forms.CharField(
+        label=_("Note"),
+        required=False,
+        widget=TinyMCE())
     purpose = forms.CharField(
         label=_("Purpose"),
         required=False,
