@@ -355,6 +355,7 @@ class ResourceBaseSerializer(
         self.fields['metadata_author'] = ContactRoleField('metadata_author', read_only=True)
         self.fields['title'] = serializers.CharField()
         self.fields['abstract'] = serializers.CharField()
+        self.fields['note'] = serializers.CharField()
         self.fields['attribution'] = serializers.CharField()
         self.fields['doi'] = serializers.CharField()
         self.fields['alternate'] = serializers.CharField(read_only=True)
@@ -417,7 +418,7 @@ class ResourceBaseSerializer(
             'pk', 'uuid', 'resource_type', 'polymorphic_ctype_id', 'perms',
             'owner', 'poc', 'metadata_author',
             'keywords', 'tkeywords', 'regions', 'category',
-            'title', 'abstract', 'attribution', 'alternate', 'doi', 'bbox_polygon', 'll_bbox_polygon', 'srid',
+            'title', 'abstract', 'note', 'attribution', 'alternate', 'doi', 'bbox_polygon', 'll_bbox_polygon', 'srid',
             'date', 'date_type', 'edition', 'purpose', 'maintenance_frequency',
             'restriction_code_type', 'constraints_other', 'license', 'language',
             'spatial_representation_type', 'temporal_extent_start', 'temporal_extent_end',
